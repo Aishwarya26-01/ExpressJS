@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expense Tracker</title>
+        <style>
+            html,body {
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtuNXUqmL7H9InQr3aaUIdPDp68ekodWGgZJmqdCHlrdZv56EY_KU2i_QXDGXY0HvNevM&usqp=CAU");
+                background-size: 100% 100%;
+                background-size: cover;
+            }
+            form, ul {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="txt" id="txth" style="text-align:center">Expense Tracker</h2>
+            <form onsubmit="registerExpense(event)">
+                <label>Expense Amount:</label>
+                <input id="amount" class="frm" type="number" name="amount" placeholder="Enter Amount" required><br>
+                <label>Expense Details:</label>
+                <input id="details" class="frm" type="text" name="details" placeholder="Enter Details" required><br>
+                <label for="category">Expense Category:</label>
+                <select name="category" id="category" aria-placeholder="Select Category" required><br>
+                    <option>Necessary</option>
+                    <option>Entertainment</option>
+                    <option>Miscellaneous</option>
+                </select>
+                <input type="submit" class="btn" id="makecall" name="makecall" value="Add Expense">
+            </form>
+            <ul id='listOfitems'></ul>
+        </div> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+        <script src="expense.js"></script>
+    </body>
+</html>
